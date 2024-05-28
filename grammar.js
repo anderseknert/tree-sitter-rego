@@ -213,9 +213,9 @@ module.exports = grammar({
       "==", "!=", "<", ">", ">=", "<="
     ),
 
-    // arith-operator  = "+" | "-" | "*" | "/"
+    // arith-operator  = "+" | "-" | "*" | "/" | "%"
     arith_operator: $ => choice(
-      "+", "-", "*", "/"
+      "+", "-", "*", "/", "%"
     ),
 
     // bin-operator    = "&" | "|"
