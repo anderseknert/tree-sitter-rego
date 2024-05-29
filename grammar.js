@@ -47,7 +47,7 @@ module.exports = grammar({
 
     // rule-head       = var ( rule-head-set | rule-head-obj | rule-head-func | rule-head-comp | "if" )
     rule_head: $ => prec.right(seq(
-      $.var,
+      field('name', $.var),
       optional(choice(
         // rule-head-set   = ( "contains" term [ "if" ] ) | ( "[" term "]" )
         seq($.contains, $.term, optional($.if)),
